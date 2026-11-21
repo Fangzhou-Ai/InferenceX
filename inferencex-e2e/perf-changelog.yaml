@@ -13280,6 +13280,6 @@
     - minimaxm31flash-fp4-b300-dynamo-vllm-agentic-dspark-disagg
     - minimaxm31flash-fp4-b300-dynamo-vllm-agentic-dspark-agg
   description:
-    - "Add MiniMax-M3.1-Flash B300 Dynamo + vLLM AgentX recipes using minimax-m31-flash-arm64-cu135-6a0e0d6."
+    - "Add MiniMax-M3.1-Flash B300 Dynamo + vLLM AgentX recipes using minimax-m31-flash-arm64-cu135-6a0e0d6, with parsing in Dynamo sidecars."
   pr-link: https://github.com/SemiAnalysisAI/InferenceX/pull/4826
   scenario-type: [agentic-coding]

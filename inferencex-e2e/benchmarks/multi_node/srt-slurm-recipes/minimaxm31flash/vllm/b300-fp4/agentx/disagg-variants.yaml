@@ -237,8 +237,6 @@ base:
         max-model-len: 1048576
         kernel-config: '{"moe_backend":"deep_gemm_mega_moe"}'
         numa-bind: true
-        dyn-tool-call-parser: minimax_m3
-        dyn-reasoning-parser: minimax_m3
         speculative-config: '{"method":"dspark","num_speculative_tokens":7,"attention_backend":"FLASHINFER_TS","kv_cache_dtype":"fp8","draft_sample_method":"probabilistic","rejection_sample_method":"block"}'
         tensor-parallel-size: 1
         data-parallel-size: 2
@@ -288,8 +286,6 @@ base:
         disable-hybrid-kv-cache-manager: true
         max-model-len: 1048576
         numa-bind: true
-        dyn-tool-call-parser: minimax_m3
-        dyn-reasoning-parser: minimax_m3
         speculative-config: '{"method":"dspark","num_speculative_tokens":7,"attention_backend":"FLASHINFER_TS","kv_cache_dtype":"fp8","draft_sample_method":"probabilistic","rejection_sample_method":"block"}'
         gpu-memory-utilization: 0.95
         # A decode preemption recomputes the whole context locally; 8192-token steps plus the
