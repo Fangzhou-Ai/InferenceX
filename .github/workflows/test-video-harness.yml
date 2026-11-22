@@ -7,6 +7,10 @@ on:
       - 'inferencex-e2e/infx/bench/video.py'
       - 'inferencex-e2e/infx/results/power/**'
       - 'inferencex-e2e/infx/results/video_artifacts.py'
+      - 'inferencex-e2e/infx/srt_slurm/video.py'
+      - 'inferencex-e2e/configs/srt-recipes/video.yaml'
+      - 'inferencex-e2e/benchmarks/single_node/srt-slurm-recipes/h3/**'
+      - 'inferencex-e2e/benchmarks/single_node/srt-slurm-recipes/wan22/**'
       - '.github/workflows/test-video-harness.yml'
   push:
     paths: *video-harness-paths
