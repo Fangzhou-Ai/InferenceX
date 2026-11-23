@@ -23,11 +23,10 @@ or Python field: the binder derives the pinned model snapshot path from `MODEL`,
 Native power is accepted only when its sampled GPU UUIDs match the server's
 `spec.json` and `launch.json` assignment. The bundle's `power.json` records the native
 manifest's `source_metric` and `power_scope` as `semantics.sensor` and `semantics.scope`.
-These measurements cover the sampled server GPUs. AMD deployments can report
-`gpu_power_usage` and NVIDIA deployments can report `DCGM_FI_DEV_POWER_USAGE`.
-Bundling a sidecar that predates
-these fields leaves them null. Older sealed bundles used a fixed DCGM label.
-Use their original power manifest to identify the sensor. On ROCm the server names each GPU by
+AMD deployments can report `gpu_power_usage` and NVIDIA deployments can report
+`DCGM_FI_DEV_POWER_USAGE`. Bundling a sidecar that predates these fields leaves them null.
+Older sealed bundles used a fixed DCGM label. Use their original power manifest to
+identify the sensor. On ROCm the server names each GPU by
 its board serial, which is how the AMD power exporter identifies it.
 The H100 runner provides an HF hub cache mount, but the pinned H3 snapshot must
 be verified there before execution. On the clusters in `HUB_DOWNLOAD_CLUSTERS`
